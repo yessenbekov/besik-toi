@@ -37,8 +37,8 @@
   #gate{position:fixed;inset:0;z-index:50;display:flex;pointer-events:auto}
   #gate .door{flex:1;background:radial-gradient(circle at 100% 50%,#1b3150 0%,var(--night) 70%);position:relative;transition:transform 1.4s cubic-bezier(.7,0,.2,1)}
   #gate .door.r{background:radial-gradient(circle at 0% 50%,#1b3150 0%,var(--night) 70%)}
-  #gate .door::after{content:"";position:absolute;top:0;bottom:0;width:10px;background:repeating-linear-gradient(180deg,var(--gold) 0 2px,transparent 2px 14px);opacity:.5}
-  #gate .door.l::after{right:6px} #gate .door.r::after{left:6px}
+  #gate .door::after{content:"";position:absolute;top:0;bottom:0;width:1px;background:linear-gradient(transparent,var(--gold) 20%,var(--gold) 80%,transparent);opacity:.6}
+  #gate .door.l::after{right:0} #gate .door.r::after{left:0}
   #gate.open .door.l{transform:translateX(-101%)} #gate.open .door.r{transform:translateX(101%)}
   #gate .seal{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--gold-2);transition:opacity .6s}
   #gate.open .seal{opacity:0;pointer-events:none}
@@ -239,7 +239,7 @@
 <div id="gate">
   <div class="door l"></div><div class="door r"></div>
   <div class="seal">
-    <svg class="shan foil-svg" viewBox="-130 -130 260 260" style="color:var(--gold)"><use href="#shanyrak"/></svg>
+    <svg class="shan foil-svg" viewBox="0 0 260 260" style="color:var(--gold)"><use href="#shanyrak"/></svg>
     <h2>Шақыру</h2>
     <div class="nm foil"><span data-f="babyName"></span> &amp; <span data-f="fatherName"></span></div>
     <p data-f="dateShort"></p>
@@ -252,8 +252,8 @@
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="stars" id="stars"></div>
-  <svg class="shan-bg" viewBox="-130 -130 260 260"><use href="#shanyrak"/></svg>
-  <svg class="shan rv" viewBox="-130 -130 260 260"><use href="#shanyrak"/></svg>
+  <svg class="shan-bg" viewBox="0 0 260 260"><use href="#shanyrak"/></svg>
+  <svg class="shan rv" viewBox="0 0 260 260"><use href="#shanyrak"/></svg>
   <p class="caps rv d1" style="color:var(--gold)">Сіздерді тойға шақырамыз</p>
   <h1 class="foil rv d1" style="margin-top:22px">Бесік той</h1>
   <span class="amp rv d2">&amp;</span>
@@ -332,7 +332,7 @@
 
 <!-- ===== HOSTS ===== -->
 <section class="hosts">
-  <svg class="shan rv" viewBox="-130 -130 260 260"><use href="#shanyrak"/></svg>
+  <svg class="shan rv" viewBox="0 0 260 260"><use href="#shanyrak"/></svg>
   <p class="caps rv">Той иелері</p>
   <div id="hosts" class="rv d1"></div>
 </section>
