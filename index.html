@@ -4,246 +4,261 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Бесік той & Мерейтой · Адия & Сардарбек</title>
-<meta name="description" content="Адияның бесік тойы және Сардарбектің 63 жас мерейтойы — 7 қаңтар 2027">
+<meta name="description" content="Адияның бесік тойы және Сардарбектің 63 жас мерейтойы. 7 қаңтар 2027, Алматы.">
 <meta property="og:title" content="Бесік той & Мерейтой">
-<meta property="og:description" content="Адияның бесік тойы және Сардарбектің 63 жас мерейтойы · 07.01.2027">
-<meta name="theme-color" content="#0d1a2b">
+<meta property="og:description" content="Адияның бесік тойы және Сардарбектің 63 жас мерейтойы. 07.01.2027">
+<meta name="theme-color" content="#0b1626">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --night:#0d1a2b; --night-2:#14263d; --cream:#faf5ec; --paper:#fffdf8;
-    --ink:#2b2219; --muted:#8c7a66;
-    --gold:#c9a35c; --gold-2:#f3dca4; --gold-3:#9c7536; --gold-soft:#e8d7b4;
-    --ruby:#7a2331;
-    --foil:linear-gradient(100deg,#9c7536 0%,#f3dca4 22%,#c9a35c 45%,#fff1cc 60%,#b8893f 80%,#e9cd8c 100%);
-    --serif:"Cormorant Garamond",Georgia,serif;
-    --sans:Montserrat,-apple-system,sans-serif;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{background:#070f1a;color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden;font-variant-numeric:lining-nums}
-  body.locked{overflow:hidden}
-  .wrap{max-width:480px;margin:0 auto;background:var(--cream);position:relative;overflow:hidden;box-shadow:0 0 80px rgba(0,0,0,.5)}
-  section{position:relative;padding:72px 26px;text-align:center}
-  .serif{font-family:var(--serif)}
-  .caps{text-transform:uppercase;letter-spacing:.32em;font-size:11px;font-weight:500;color:var(--muted)}
-  .foil{background:var(--foil);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
-  @keyframes shine{to{background-position:-200% 0}}
-  .gold{color:var(--gold)}
+/* Heritage night-and-gold theme. One dark theme for the whole page. */
+:root{
+  --bg:#0b1626; --bg-2:#10203a; --bg-3:#081120;
+  --text:#efe4cb; --text-dim:#b9ab8e;
+  --gold:#d4b06a; --gold-hi:#f6e3b0; --gold-lo:#9b7638;
+  --line:rgba(212,176,106,.28);
+  --foil:linear-gradient(100deg,#9b7638 0%,#f6e3b0 22%,#d4b06a 44%,#fff3d1 58%,#b88d45 78%,#ecd394 100%);
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:Montserrat,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg-3);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden;font-variant-numeric:lining-nums}
+body.locked{overflow:hidden;height:100dvh}
+::selection{background:var(--gold);color:var(--bg)}
 
-  /* ========== GATE (intro) ========== */
-  #gate{position:fixed;inset:0;z-index:50;display:flex;pointer-events:auto}
-  #gate .door{flex:1;background:radial-gradient(circle at 100% 50%,#1b3150 0%,var(--night) 70%);position:relative;transition:transform 1.4s cubic-bezier(.7,0,.2,1)}
-  #gate .door.r{background:radial-gradient(circle at 0% 50%,#1b3150 0%,var(--night) 70%)}
-  #gate .door::after{content:"";position:absolute;top:0;bottom:0;width:1px;background:linear-gradient(transparent,var(--gold) 20%,var(--gold) 80%,transparent);opacity:.25}
-  #gate .door.l::after{right:0} #gate .door.r::after{left:0}
-  #gate.open .door.l{transform:translateX(-101%)} #gate.open .door.r{transform:translateX(101%)}
-  #gate .seal{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--gold-2);transition:opacity .6s}
-  #gate.open .seal{opacity:0;pointer-events:none}
-  #gate .seal .shan{width:170px;margin-bottom:26px}
-  #gate .seal h2{font-family:var(--serif);font-weight:400;font-size:20px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold-2)}
-  #gate .seal .nm{font-family:var(--serif);font-style:italic;font-size:44px;line-height:1.1;margin:14px 0 6px}
-  #gate .seal p{font-size:12px;letter-spacing:.2em;opacity:.7}
-  .open-btn{margin-top:36px;padding:16px 34px;border-radius:40px;border:1px solid var(--gold);background:rgba(201,163,92,.08);color:var(--gold-2);font:500 12px var(--sans);letter-spacing:.28em;text-transform:uppercase;cursor:pointer;position:relative;overflow:hidden}
-  .open-btn::before{content:"";position:absolute;inset:-2px;border-radius:40px;border:1px solid var(--gold);animation:pulse 2.2s ease-out infinite}
-  @keyframes pulse{from{transform:scale(1);opacity:.8}to{transform:scale(1.35,1.6);opacity:0}}
+#dust{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.wrap{position:relative;z-index:2;max-width:480px;margin:0 auto;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 35%,var(--bg) 70%,var(--bg-3) 100%);box-shadow:0 0 120px rgba(0,0,0,.6);overflow:hidden}
+section{position:relative;padding:88px 28px}
+.serif{font-family:var(--serif)}
+.foil{background:var(--foil);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
 
-  /* ========== HERO ========== */
-  .hero{min-height:100svh;background:radial-gradient(ellipse at 50% 30%,#1d3555 0%,var(--night) 60%,#08111d 100%);color:var(--gold-2);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:60px 24px 90px}
-  .stars{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-  .stars i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff3cf;box-shadow:0 0 6px #ffe7a8;animation:tw 3s ease-in-out infinite}
-  @keyframes tw{0%,100%{opacity:.15;transform:scale(.6)}50%{opacity:1;transform:scale(1.2)}}
-  .hero .shan-bg{position:absolute;width:520px;left:50%;top:50%;margin:-260px 0 0 -260px;opacity:.09;animation:spin 120s linear infinite;color:var(--gold)}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  .hero .shan{width:110px;color:var(--gold);margin-bottom:28px;filter:drop-shadow(0 0 18px rgba(201,163,92,.35))}
-  .hero h1{font-family:var(--serif);font-weight:500;font-size:58px;line-height:1;letter-spacing:.01em}
-  .hero .amp{font-family:var(--serif);font-style:italic;font-size:46px;color:var(--gold);display:block;margin:2px 0 4px}
-  .hero .who{margin-top:30px;display:flex;align-items:center;gap:18px;justify-content:center}
-  .hero .who div{font-family:var(--serif);font-style:italic;font-size:30px;line-height:1.1;color:#fff4dc}
-  .hero .who small{display:block;font-family:var(--sans);font-style:normal;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-top:6px}
-  .hero .who .sep{width:1px;height:52px;background:linear-gradient(transparent,var(--gold),transparent)}
-  .hero .date{margin-top:34px;font-family:var(--serif);font-size:20px;letter-spacing:.4em;color:var(--gold-2)}
-  .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);width:22px;height:36px;border:1px solid rgba(201,163,92,.6);border-radius:12px}
-  .scroll-hint::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:var(--gold);animation:wheel 1.8s ease-in-out infinite}
-  @keyframes wheel{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+/* ---------- Shanyrak (inline, draws itself) ---------- */
+.shan{display:block;color:var(--gold)}
+.draw *{stroke-dasharray:1;stroke-dashoffset:1}
+.draw.go *{animation:draw 2.6s var(--ease) forwards}
+.draw.go .s2{animation-delay:.5s}.draw.go .s3{animation-delay:.9s;animation-duration:1.6s}
+@keyframes draw{to{stroke-dashoffset:0}}
 
-  /* ornament band */
-  .band{height:34px;background:var(--night);color:var(--gold);position:relative}
-  .band svg{width:100%;height:100%;display:block}
-  .band.light{background:var(--cream)}
+/* ---------- GATE ---------- */
+#gate{position:fixed;inset:0;z-index:50;display:grid;grid-template-columns:1fr 1fr}
+#gate .door{background:radial-gradient(120% 80% at 100% 50%,#18304f 0%,var(--bg) 60%,var(--bg-3) 100%);transition:transform 1.5s cubic-bezier(.77,0,.18,1)}
+#gate .door.r{background:radial-gradient(120% 80% at 0% 50%,#18304f 0%,var(--bg) 60%,var(--bg-3) 100%)}
+#gate .door.l{box-shadow:inset -1px 0 0 rgba(212,176,106,.12)}
+#gate.open .door.l{transform:translateX(-101%)}#gate.open .door.r{transform:translateX(101%)}
+#gate .burst{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px;border-radius:50%;background:radial-gradient(circle,#fff6dc 0%,rgba(246,227,176,.5) 30%,transparent 70%);opacity:0;pointer-events:none}
+#gate.open .burst{animation:burst 1.2s ease-out}
+@keyframes burst{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(160)}}
+#gate .seal{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;text-align:center;transition:opacity .5s,transform .8s var(--ease)}
+#gate.open .seal{opacity:0;transform:scale(1.08);pointer-events:none}
+#gate .shan{width:min(62vw,230px);filter:drop-shadow(0 0 24px rgba(212,176,106,.35))}
+#gate .ttl{margin-top:34px;font-family:var(--serif);font-weight:400;font-size:clamp(34px,10vw,44px);line-height:1.15;padding-bottom:4px;opacity:0;transform:translateY(14px);transition:opacity 1s var(--ease) 1.6s,transform 1s var(--ease) 1.6s}
+#gate .sub{margin-top:8px;font-size:12px;letter-spacing:.3em;color:var(--text-dim);opacity:0;transition:opacity 1s var(--ease) 1.9s}
+#gate .open-btn{margin-top:40px;opacity:0;transform:translateY(14px);transition:opacity 1s var(--ease) 2.2s,transform 1s var(--ease) 2.2s}
+#gate.ready .ttl,#gate.ready .sub,#gate.ready .open-btn{opacity:1;transform:none}
 
-  /* ========== GREETING ========== */
-  .greet{background:var(--paper)}
-  .card{position:relative;padding:46px 24px;border:1px solid var(--gold-soft)}
-  .card::before{content:"";position:absolute;inset:6px;border:1px solid var(--gold-soft);pointer-events:none}
-  .corner{position:absolute;width:46px;height:46px;color:var(--gold)}
-  .corner.tl{top:-1px;left:-1px} .corner.tr{top:-1px;right:-1px;transform:scaleX(-1)}
-  .corner.bl{bottom:-1px;left:-1px;transform:scaleY(-1)} .corner.br{bottom:-1px;right:-1px;transform:scale(-1,-1)}
-  .greet h2{font-family:var(--serif);font-weight:500;font-size:34px;line-height:1.15;margin:14px 0}
-  .greet p{font-size:14.5px;margin:8px 0}
-  .greet .name{font-family:var(--serif);font-style:italic;font-size:40px;line-height:1.15;margin:6px 0 0}
-  .greet .ev{font-family:var(--serif);font-size:20px;letter-spacing:.04em;color:var(--ruby)}
-  .greet .and{display:flex;align-items:center;justify-content:center;gap:14px;margin:22px 0;color:var(--gold)}
-  .greet .and::before,.greet .and::after{content:"";height:1px;width:60px;background:var(--gold-soft)}
-  .greet .foil,.when .foil{background-image:linear-gradient(100deg,#7d5a24 0%,#c9a35c 30%,#8f6a2c 55%,#d6b26a 75%,#7d5a24 100%)}
-  .orn{width:150px;color:var(--gold);display:block;margin:0 auto}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;border-radius:999px;border:1px solid var(--gold);background:transparent;color:var(--gold-hi);font:500 12px var(--sans);letter-spacing:.24em;text-transform:uppercase;text-decoration:none;white-space:nowrap;cursor:pointer;overflow:hidden;transition:transform .2s var(--ease)}
+.btn:active{transform:scale(.97)}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,240,200,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .9s var(--ease)}
+.btn:hover::after{transform:translateX(120%)}
+.btn.solid{background:var(--foil);background-size:220% 100%;border-color:transparent;color:var(--bg);font-weight:600}
+.btn:disabled{opacity:.6}
+.pulse{overflow:visible}
+.pulse::before{content:"";position:absolute;inset:-1px;border-radius:inherit;border:1px solid var(--gold);animation:ring 2.4s ease-out infinite}
+@keyframes ring{from{opacity:.8;transform:scale(1)}to{opacity:0;transform:scale(1.25,1.6)}}
 
-  /* ========== DATE ========== */
-  .when{background:var(--cream)}
-  .bigdate{display:flex;align-items:center;justify-content:center;gap:16px;margin:22px 0 10px}
-  .bigdate .side{font-size:11px;letter-spacing:.3em;text-transform:uppercase;padding:8px 0;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);min-width:92px}
-  .bigdate .day{font-family:var(--serif);font-size:96px;line-height:.9;font-weight:500}
-  .cal{margin:26px auto 0;max-width:300px}
-  .cal table{width:100%;border-collapse:collapse;font-size:13px}
-  .cal th{font-weight:500;color:var(--muted);font-size:10px;letter-spacing:.1em;padding:6px 0}
-  .cal td{padding:7px 0;position:relative;color:#6d5d4c}
-  .cal td.on{color:#fff;font-weight:600}
-  .cal td.on span{position:relative;z-index:1}
-  .cal td.on::before{content:"";position:absolute;left:50%;top:50%;width:34px;height:34px;transform:translate(-50%,-50%);background:var(--ruby);border-radius:50%;box-shadow:0 0 0 4px rgba(122,35,49,.15)}
-  .timeline{list-style:none;max-width:320px;margin:40px auto 0;text-align:left;position:relative}
-  .timeline::before{content:"";position:absolute;left:79px;top:10px;bottom:10px;width:1px;background:linear-gradient(var(--gold),var(--gold-soft))}
-  .timeline li{display:flex;align-items:center;gap:40px;padding:14px 0;position:relative}
-  .timeline .t{font-family:var(--serif);font-size:26px;font-weight:500;min-width:62px;text-align:right}
-  .timeline li::after{content:"";position:absolute;left:74px;width:11px;height:11px;border-radius:50%;background:var(--cream);border:2px solid var(--gold)}
-  .timeline .d{font-size:14px}
+/* ---------- HERO ---------- */
+.hero{min-height:100dvh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:72px 24px 64px;isolation:isolate}
+.hero .halo{position:absolute;left:50%;top:44%;width:140%;aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(212,176,106,.16) 0%,rgba(212,176,106,.04) 35%,transparent 62%);z-index:-1}
+.hero .shan-bg{position:absolute;left:50%;top:44%;width:150%;transform:translate(-50%,-50%);opacity:.08;z-index:-1;animation:spin 140s linear infinite}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@supports (animation-timeline: scroll()){
+  .hero .shan-bg{animation:spinScroll linear both;animation-timeline:scroll(root)}
+  @keyframes spinScroll{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(220deg)}}
+}
+.hero .eyebrow{margin-bottom:26px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(52px,16vw,70px);line-height:1.05;letter-spacing:-.01em}
+.hero h1 > span{display:block;padding-bottom:4px}
+.hero h1 .amp{font-style:italic;font-size:.62em;line-height:1.2;color:var(--gold);margin:2px 0}
+.hero .pair{margin-top:40px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;width:100%;max-width:330px}
+.hero .pair .n{font-family:var(--serif);font-style:italic;font-size:30px;line-height:1.15;padding-bottom:2px}
+.hero .pair .k{display:block;margin-top:4px;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--text-dim)}
+.hero .pair .bar{width:1px;height:56px;background:linear-gradient(transparent,var(--gold),transparent)}
+.hero .date{margin-top:34px;font-family:var(--serif);font-size:19px;letter-spacing:.42em;color:var(--gold-hi);padding-left:.42em}
 
-  /* ========== COUNTDOWN ========== */
-  .count{background:radial-gradient(ellipse at 50% 0%,#1d3555,var(--night) 70%);color:var(--gold-2);overflow:hidden}
-  .count .caps{color:var(--gold)}
-  .count h3{font-family:var(--serif);font-weight:400;font-style:italic;font-size:28px;margin:8px 0 26px}
-  .timer{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-  .timer div{padding:16px 0 12px;border-radius:14px;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.01));border:1px solid rgba(201,163,92,.35);backdrop-filter:blur(4px)}
-  .timer b{display:block;font-family:var(--serif);font-weight:500;font-size:38px;line-height:1}
-  .timer small{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+/* split-letter kinetic type */
+.split .ch{display:inline-block;opacity:0;transform:translateY(.5em) rotate(4deg);filter:blur(6px);transition:opacity .9s var(--ease),transform 1.1s var(--ease),filter .9s var(--ease);transition-delay:calc(var(--i)*45ms + var(--d,0ms))}
+.split.in .ch{opacity:1;transform:none;filter:none}
+.split.foil .ch{background:var(--foil);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite}
+.foil-anim{animation:shine 7s linear infinite}
+@keyframes shine{to{background-position:-220% 0}}
 
-  /* ========== PLACE ========== */
-  .place{background:var(--paper)}
-  .pin{width:54px;height:54px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;background:var(--night);color:var(--gold);box-shadow:0 10px 30px rgba(13,26,43,.25)}
-  .place h3{font-family:var(--serif);font-weight:500;font-size:34px;line-height:1.1;margin:12px 0 8px}
-  .place p{font-size:14px;color:var(--muted)}
-  .btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
-  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border:1px solid var(--gold);color:var(--ink);text-decoration:none;border-radius:40px;font:500 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;transition:.3s;background:transparent;cursor:pointer}
-  .btn:hover{background:var(--gold);color:#fff}
-  .btn.dark{background:var(--night);border-color:var(--night);color:var(--gold-2)}
-  .btn.dark:hover{background:var(--night-2)}
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);filter:blur(4px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease),filter 1.1s var(--ease);transition-delay:var(--d,0ms)}
+.rv.in{opacity:1;transform:none;filter:none}
 
-  /* ========== HOSTS ========== */
-  .hosts{background:var(--cream)}
-  .hosts .h{font-family:var(--serif);font-style:italic;font-size:38px;line-height:1.2;margin-top:14px;color:var(--ruby)}
-  .hosts .shan{width:70px;color:var(--gold);margin:0 auto 6px;display:block}
+/* ornament band */
+.band{height:30px;color:var(--gold);opacity:.55}
+.band svg{width:100%;height:100%;display:block}
 
-  /* ========== RSVP ========== */
-  .rsvp{background:var(--night);color:var(--gold-2)}
-  .rsvp .caps{color:var(--gold)}
-  .rsvp h2{font-family:var(--serif);font-weight:500;font-size:36px;margin-top:8px}
-  .rsvp .sub{font-size:13px;opacity:.75;margin-top:6px}
-  .rsvp form{max-width:340px;margin:28px auto 0;text-align:left}
-  .rsvp input[type=text]{width:100%;padding:14px 4px;border:none;border-bottom:1px solid rgba(201,163,92,.45);background:transparent;font:inherit;font-size:16px;color:#fff4dc;outline:none;margin-bottom:22px}
-  .rsvp input[type=text]::placeholder{color:rgba(243,220,164,.5)}
-  .rsvp input[type=text]:focus{border-color:var(--gold)}
-  .opt{display:block;margin-bottom:10px;cursor:pointer}
-  .opt input{position:absolute;opacity:0}
-  .opt span{display:flex;align-items:center;gap:14px;padding:14px 18px;border:1px solid rgba(201,163,92,.3);border-radius:12px;font-size:14px;transition:.25s}
-  .opt span::before{content:"";width:16px;height:16px;border-radius:50%;border:1px solid var(--gold);flex:none;transition:.25s}
-  .opt input:checked + span{border-color:var(--gold);background:rgba(201,163,92,.12)}
-  .opt input:checked + span::before{background:var(--gold);box-shadow:inset 0 0 0 3px var(--night)}
-  .send{width:100%;margin-top:14px;padding:17px;border:none;border-radius:40px;background:var(--foil);background-size:200% 100%;animation:shine 6s linear infinite;color:var(--night);font:600 12px var(--sans);letter-spacing:.28em;text-transform:uppercase;cursor:pointer}
-  .send:disabled{opacity:.6}
-  .thanks{display:none;text-align:center;margin-top:20px;font-family:var(--serif);font-style:italic;font-size:24px}
+/* ---------- GREETING ---------- */
+.greet{text-align:center}
+.greet .orn{display:block;width:150px;margin:0 auto 26px;color:var(--gold)}
+.greet h2{font-family:var(--serif);font-weight:400;font-size:38px;line-height:1.15;padding-bottom:4px}
+.greet .lead{margin:18px auto 0;max-width:30ch;font-size:15px;color:var(--text-dim)}
+.greet .body{margin:28px auto 0;max-width:30ch;font-family:var(--serif);font-size:22px;line-height:1.5}
+.greet .body b{font-weight:500;font-style:italic;color:var(--gold-hi)}
 
-  footer{background:#08111d;color:var(--gold-2);padding:60px 24px 90px;text-align:center}
-  footer .big{font-family:var(--serif);font-style:italic;font-size:34px;line-height:1.2;margin-top:18px}
-  footer small{display:block;margin-top:14px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);opacity:.7}
+/* ---------- TWO JOYS ---------- */
+.joys{padding-top:24px;padding-bottom:24px}
+.joy{position:relative;padding:44px 26px 40px;border-radius:var(--r);border:1px solid var(--line);background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.01));box-shadow:inset 0 1px 0 rgba(255,240,200,.08);overflow:hidden}
+.joy + .joy{margin-top:16px}
+.joy .tag{position:relative;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.joy .nm{position:relative;font-family:var(--serif);font-style:italic;font-size:54px;line-height:1.1;padding-bottom:6px;margin-top:10px}
+.joy p{position:relative;font-size:14px;color:var(--text-dim);margin-top:6px}
+.joy.a .moon{position:absolute;right:-34px;top:50%;width:180px;transform:translateY(-50%);color:var(--gold)}
+.joy.a .moon .glow{animation:breathe 5s ease-in-out infinite}
+@keyframes breathe{50%{opacity:.45}}
+.joy.b{text-align:right}
+.joy.b .big{position:absolute;left:-10px;top:50%;width:230px;transform:translateY(-50%)}
+.joy.b .big text{fill:none;stroke:var(--gold);stroke-width:1.2;stroke-dasharray:1400;stroke-dashoffset:1400;transition:stroke-dashoffset 3.2s var(--ease) .3s}
+.joy.b.in .big text{stroke-dashoffset:0}
 
-  /* music button */
-  .music{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));width:52px;height:52px;border-radius:50%;border:1px solid var(--gold);background:rgba(13,26,43,.85);backdrop-filter:blur(6px);cursor:pointer;z-index:40;display:none;align-items:flex-end;justify-content:center;gap:3px;padding-bottom:17px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
-  .music.show{display:flex}
-  .music i{width:3px;height:6px;background:var(--gold);border-radius:2px}
-  .music.on i{animation:eq 1s ease-in-out infinite}
-  .music.on i:nth-child(2){animation-delay:.2s}.music.on i:nth-child(3){animation-delay:.4s}.music.on i:nth-child(4){animation-delay:.1s}
-  @keyframes eq{0%,100%{height:5px}50%{height:18px}}
+/* ---------- DATE ---------- */
+.when{text-align:center}
+.bigdate{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+.bigdate .side{font-size:11px;letter-spacing:.3em;text-transform:uppercase;padding:9px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--text-dim)}
+.bigdate .day{font-family:var(--serif);font-weight:400;font-size:112px;line-height:1}
+.when .yr{margin-top:6px;font-family:var(--serif);font-size:22px;letter-spacing:.5em;padding-left:.5em;color:var(--gold-hi)}
+.cal{margin:40px auto 0;max-width:300px}
+.cal table{width:100%;border-collapse:collapse;font-size:13px}
+.cal th{font-weight:500;font-size:10px;letter-spacing:.1em;color:var(--gold);padding:6px 0 10px}
+.cal td{padding:7px 0;color:var(--text-dim);position:relative}
+.cal td.on{color:var(--bg);font-weight:600}
+.cal td.on span{position:relative;z-index:1}
+.cal td.on::before{content:"";position:absolute;left:50%;top:50%;width:34px;height:34px;transform:translate(-50%,-50%);border-radius:50%;background:var(--foil);background-size:220% 100%;animation:shine 7s linear infinite}
+.cal td.on::after{content:"";position:absolute;left:50%;top:50%;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1px solid var(--gold);animation:ring 2.4s ease-out infinite}
+.timeline{list-style:none;position:relative;max-width:320px;margin:56px auto 0;text-align:left}
+.timeline::before{content:"";position:absolute;left:83px;top:12px;bottom:12px;width:1px;background:var(--line)}
+.timeline .fill{position:absolute;left:83px;top:12px;bottom:12px;width:1px;background:linear-gradient(var(--gold-hi),var(--gold));transform-origin:top;transform:scaleY(0);transition:transform 1.8s var(--ease) .3s}
+.timeline.in .fill{transform:scaleY(1)}
+.timeline li{display:grid;grid-template-columns:62px 1fr;gap:42px;align-items:center;padding:16px 0;position:relative}
+.timeline li::after{content:"";position:absolute;left:78px;width:11px;height:11px;border-radius:50%;background:var(--bg-2);border:1px solid var(--gold);box-shadow:0 0 0 4px var(--bg-2)}
+.timeline .t{font-family:var(--serif);font-size:27px;text-align:right;color:var(--gold-hi)}
+.timeline .d{font-size:14.5px}
 
-  /* reveal */
-  .rv{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
-  .rv.in{opacity:1;transform:none}
-  .rv.d1{transition-delay:.15s}.rv.d2{transition-delay:.3s}.rv.d3{transition-delay:.45s}
-  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+/* ---------- COUNTDOWN ---------- */
+.count{text-align:center;padding-top:40px}
+.count h3{font-family:var(--serif);font-weight:400;font-style:italic;font-size:30px;line-height:1.2;padding-bottom:4px}
+.timer{margin-top:30px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cell{padding:18px 0 14px;border-radius:var(--r);border:1px solid var(--line);background:linear-gradient(170deg,rgba(255,255,255,.07),rgba(255,255,255,.015));box-shadow:inset 0 1px 0 rgba(255,240,200,.12);overflow:hidden}
+.cell b{display:block;font-family:var(--serif);font-weight:500;font-size:40px;line-height:1;color:var(--gold-hi)}
+.cell b.tick{animation:tick .55s var(--ease)}
+@keyframes tick{from{transform:translateY(-40%);opacity:0;filter:blur(3px)}to{transform:none;opacity:1;filter:none}}
+.cell small{display:block;margin-top:6px;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-dim)}
+
+/* ---------- PLACE ---------- */
+.place{text-align:center}
+.pin{width:64px;height:64px;margin:0 auto 22px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--gold);position:relative}
+.pin::before{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid var(--gold);animation:ring 2.6s ease-out infinite}
+.pin svg{width:26px;height:26px;animation:bob 2.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-4px)}}
+.place h3{font-family:var(--serif);font-weight:400;font-size:38px;line-height:1.15;padding-bottom:4px}
+.place p{margin-top:8px;font-size:14px;color:var(--text-dim)}
+.btns{margin:30px auto 0;display:grid;gap:12px;max-width:300px}
+
+/* ---------- RSVP ---------- */
+.rsvp{text-align:center}
+.rsvp h2{font-family:var(--serif);font-weight:400;font-size:40px;line-height:1.15;margin-top:12px;padding-bottom:4px}
+.rsvp .sub{margin-top:8px;font-size:14px;color:var(--text-dim)}
+.rsvp form{max-width:340px;margin:34px auto 0;text-align:left;display:grid;gap:10px}
+.rsvp label.lbl{font-size:12px;letter-spacing:.08em;color:var(--text-dim)}
+.rsvp input[type=text]{width:100%;padding:12px 2px;border:none;border-bottom:1px solid var(--line);background:transparent;color:var(--text);font:400 17px var(--sans);outline:none;transition:border-color .3s;margin-bottom:12px}
+.rsvp input[type=text]::placeholder{color:#8f8572}
+.rsvp input[type=text]:focus{border-color:var(--gold)}
+.opt{display:block;cursor:pointer}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt span{display:flex;align-items:center;gap:14px;padding:15px 18px;border:1px solid var(--line);border-radius:var(--r);font-size:14.5px;transition:border-color .3s,background .3s,transform .2s var(--ease)}
+.opt span::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;border:1px solid var(--gold);transition:.3s var(--ease)}
+.opt:active span{transform:scale(.98)}
+.opt input:checked + span{border-color:var(--gold);background:rgba(212,176,106,.1)}
+.opt input:checked + span::before{background:var(--gold);box-shadow:inset 0 0 0 4px var(--bg-2)}
+.opt input:focus-visible + span{outline:2px solid var(--gold);outline-offset:2px}
+.err{display:none;font-size:13px;color:#f2b8a0;margin:-6px 0 4px}
+.rsvp .btn.solid{width:100%;margin-top:12px;padding:18px}
+.done{display:none;text-align:center;padding:30px 0 0}
+.done .serif{font-size:30px;font-style:italic;line-height:1.25;color:var(--gold-hi);padding-bottom:4px}
+.done p{margin-top:8px;font-size:14px;color:var(--text-dim)}
+.rsvp.sent form{display:none}.rsvp.sent .done{display:block;animation:pop .8s var(--ease)}
+#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:45}
+
+/* ---------- FOOTER ---------- */
+footer{position:relative;text-align:center;padding:72px 24px calc(110px + env(safe-area-inset-bottom))}
+footer .shan{width:84px;margin:0 auto 26px}
+footer .k{font-size:13px;color:var(--text-dim)}
+footer .hosts{margin-top:10px;font-family:var(--serif);font-style:italic;font-size:40px;line-height:1.2;padding-bottom:4px}
+footer .bye{margin-top:34px;font-family:var(--serif);font-size:22px;color:var(--gold-hi)}
+
+/* ---------- Music ---------- */
+.music{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:40;width:54px;height:54px;border-radius:50%;border:1px solid var(--gold);background:rgba(11,22,38,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 rgba(255,240,200,.18),0 10px 30px rgba(0,0,0,.4);display:none;align-items:flex-end;justify-content:center;gap:3px;padding-bottom:18px;cursor:pointer}
+.music.show{display:flex;animation:pop .6s var(--ease)}
+@keyframes pop{from{transform:scale(.6);opacity:0}}
+.music i{width:3px;height:5px;border-radius:2px;background:var(--gold)}
+.music.on i{animation:eq 1s ease-in-out infinite}
+.music.on i:nth-child(2){animation-delay:.25s}.music.on i:nth-child(3){animation-delay:.5s}.music.on i:nth-child(4){animation-delay:.12s}
+@keyframes eq{0%,100%{height:5px}50%{height:18px}}
+
+@media (min-width:520px){ .wrap{border-left:1px solid rgba(212,176,106,.14);border-right:1px solid rgba(212,176,106,.14)} }
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.split .ch{opacity:1;transform:none;filter:none}
+  .draw *{stroke-dashoffset:0}
+  .joy.b .big text{stroke-dashoffset:0}
+  .timeline .fill{transform:none}
+  #gate .ttl,#gate .sub,#gate .open-btn{opacity:1;transform:none}
+}
 </style>
 </head>
 <body class="locked">
 
-<!-- ===== SVG symbols ===== -->
-<svg width="0" height="0" style="position:absolute;color:#c9a35c" aria-hidden="true">
+<canvas id="dust" aria-hidden="true"></canvas>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute;color:#d4b06a" aria-hidden="true">
   <defs>
-    <!-- Шаңырақ -->
-    <symbol id="shanyrak" viewBox="-130 -130 260 260">
-      <g fill="none" stroke="currentColor" stroke-linecap="round">
-        <g stroke-width="1.4" opacity=".9">
-          <!-- уықтар -->
-          <g id="uyk"><line x1="0" y1="-92" x2="0" y2="-126"/></g>
-          <use href="#uyk" transform="rotate(15)"/><use href="#uyk" transform="rotate(30)"/><use href="#uyk" transform="rotate(45)"/>
-          <use href="#uyk" transform="rotate(60)"/><use href="#uyk" transform="rotate(75)"/><use href="#uyk" transform="rotate(90)"/>
-          <use href="#uyk" transform="rotate(105)"/><use href="#uyk" transform="rotate(120)"/><use href="#uyk" transform="rotate(135)"/>
-          <use href="#uyk" transform="rotate(150)"/><use href="#uyk" transform="rotate(165)"/><use href="#uyk" transform="rotate(180)"/>
-          <use href="#uyk" transform="rotate(195)"/><use href="#uyk" transform="rotate(210)"/><use href="#uyk" transform="rotate(225)"/>
-          <use href="#uyk" transform="rotate(240)"/><use href="#uyk" transform="rotate(255)"/><use href="#uyk" transform="rotate(270)"/>
-          <use href="#uyk" transform="rotate(285)"/><use href="#uyk" transform="rotate(300)"/><use href="#uyk" transform="rotate(315)"/>
-          <use href="#uyk" transform="rotate(330)"/><use href="#uyk" transform="rotate(345)"/>
-        </g>
-        <circle r="92" stroke-width="3"/>
-        <circle r="84" stroke-width="1"/>
-        <!-- күлдіреуіш -->
-        <g stroke-width="2.4">
-          <path d="M-80 -26 Q0 -40 80 -26"/><path d="M-84 0 Q0 -14 84 0"/><path d="M-80 26 Q0 12 80 26"/>
-          <path d="M-26 -80 Q-12 0 -26 80"/><path d="M0 -84 Q14 0 0 84"/><path d="M26 -80 Q40 0 26 80"/>
-        </g>
-        
-      </g>
-    </symbol>
-    <!-- Қошқар мүйіз -->
     <symbol id="horn" viewBox="0 0 200 60">
-      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
         <path d="M100 52 C100 30 84 16 68 16 C54 16 46 26 46 36 C46 45 53 50 60 50 C67 50 71 44 71 39 C71 34 67 31 63 31"/>
         <path d="M100 52 C100 30 116 16 132 16 C146 16 154 26 154 36 C154 45 147 50 140 50 C133 50 129 44 129 39 C129 34 133 31 137 31"/>
         <path d="M100 52 L100 8"/>
         <path d="M100 15 C94 11 92 5 100 2 C108 5 106 11 100 15Z" fill="currentColor"/>
         <path d="M46 36 C32 36 22 30 6 30"/><path d="M154 36 C168 36 178 30 194 30"/>
-        <circle cx="8" cy="30" r="2.4" fill="currentColor"/><circle cx="192" cy="30" r="2.4" fill="currentColor"/>
       </g>
     </symbol>
-    <!-- бұрыш өрнегі -->
-    <symbol id="corner" viewBox="0 0 46 46">
-      <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-        <path d="M2 44 V2 H44"/>
-        <path d="M8 30 C8 16 16 8 30 8"/>
-        <path d="M8 30 C8 22 14 18 19 18 C24 18 26 22 24 25 C22 28 18 27 18 24"/>
-        <path d="M30 8 C22 8 18 14 18 19"/>
-        <circle cx="8" cy="8" r="2.5" fill="currentColor"/>
-      </g>
-    </symbol>
-    <!-- өрнек жолағы -->
-    <pattern id="bandp" width="56" height="34" patternUnits="userSpaceOnUse">
-      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
-        <path d="M0 17 H8 M48 17 H56"/>
-        <path d="M28 27 C28 18 22 11 16 11 C11 11 8 15 8 19 C8 23 11 25 14 25 C17 25 18 22 18 20"/>
-        <path d="M28 27 C28 18 34 11 40 11 C45 11 48 15 48 19 C48 23 45 25 42 25 C39 25 38 22 38 20"/>
-        <path d="M28 27 V6"/>
+    <pattern id="bandp" width="56" height="30" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+        <path d="M0 15 H8 M48 15 H56"/>
+        <path d="M28 25 C28 16 22 9 16 9 C11 9 8 13 8 17 C8 21 11 23 14 23 C17 23 18 20 18 18"/>
+        <path d="M28 25 C28 16 34 9 40 9 C45 9 48 13 48 17 C48 21 45 23 42 23 C39 23 38 20 38 18"/>
+        <path d="M28 25 V5"/>
       </g>
     </pattern>
   </defs>
 </svg>
 
 <!-- ===== GATE ===== -->
-<div id="gate">
+<div id="gate" role="dialog" aria-label="Шақыру">
   <div class="door l"></div><div class="door r"></div>
+  <div class="burst"></div>
   <div class="seal">
-    <svg class="shan foil-svg" viewBox="0 0 260 260" style="color:var(--gold)"><use href="#shanyrak"/></svg>
-    <h2>Шақыру</h2>
-    <div class="nm foil"><span data-f="babyName"></span> &amp; <span data-f="fatherName"></span></div>
-    <p data-f="dateShort"></p>
-    <button class="open-btn" id="openBtn">Шақыруды ашу</button>
+    <div class="shan draw" data-shan></div>
+    <div class="ttl foil foil-anim"><span data-f="babyName"></span> &amp; <span data-f="fatherName"></span></div>
+    <div class="sub" data-f="dateShort"></div>
+    <button class="btn pulse open-btn" id="openBtn">Шақыруды ашу</button>
   </div>
 </div>
 
@@ -251,123 +266,132 @@
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <div class="stars" id="stars"></div>
-  <svg class="shan-bg" viewBox="0 0 260 260"><use href="#shanyrak"/></svg>
-  <svg class="shan rv" viewBox="0 0 260 260"><use href="#shanyrak"/></svg>
-  <p class="caps rv d1" style="color:var(--gold)">Сіздерді тойға шақырамыз</p>
-  <h1 class="foil rv d1" style="margin-top:22px">Бесік той</h1>
-  <span class="amp rv d2">&amp;</span>
-  <h1 class="foil rv d2"><span data-f="jubileeTitle"></span></h1>
-  <div class="who rv d3">
-    <div><span data-f="babyName"></span><small>бесік той</small></div>
-    <span class="sep"></span>
-    <div><span data-f="fatherName"></span><small><span data-f="fatherAge"></span> жас</small></div>
+  <div class="halo"></div>
+  <div class="shan shan-bg" data-shan></div>
+  <p class="eyebrow rv">Сіздерді тойға шақырамыз</p>
+  <h1>
+    <span class="split foil" data-split>Бесік той</span>
+    <span class="amp split" data-split style="--d:500ms">&amp;</span>
+    <span class="split foil" data-split style="--d:700ms" data-f="jubileeTitle"></span>
+  </h1>
+  <div class="pair rv" style="--d:1300ms">
+    <div><div class="n" data-f="babyName"></div><span class="k">бесік той</span></div>
+    <span class="bar"></span>
+    <div><div class="n" data-f="fatherName"></div><span class="k"><span data-f="fatherAge"></span> жас</span></div>
   </div>
-  <div class="date rv d3" data-f="dateShort"></div>
-  <div class="scroll-hint"></div>
+  <div class="date rv" style="--d:1500ms" data-f="dateShort"></div>
 </section>
 
 <div class="band"><svg><rect width="100%" height="100%" fill="url(#bandp)"/></svg></div>
 
 <!-- ===== GREETING ===== -->
 <section class="greet">
-  <div class="card rv">
-    <svg class="corner tl"><use href="#corner"/></svg><svg class="corner tr"><use href="#corner"/></svg>
-    <svg class="corner bl"><use href="#corner"/></svg><svg class="corner br"><use href="#corner"/></svg>
-    <svg class="orn" viewBox="0 0 200 60"><use href="#horn"/></svg>
-    <h2>Құрметті қонақтар!</h2>
-    <p>Ағайын-туыс, бауырлар, нағашы-жиен, бөлелер, құда-жекжат, дос-жаран, әріптестер, көршілер!</p>
-    <p style="margin-top:22px">Сіздерді <span data-f="babyRelation"></span></p>
-    <div class="name foil" data-f="babyName"></div>
-    <div class="ev">бесік тойына</div>
-    <div class="and">✦</div>
-    <p><span data-f="fatherRelation"></span></p>
-    <div class="name foil" data-f="fatherName"></div>
-    <div class="ev"><span data-f="fatherAge"></span> жас мерейтойына</div>
-    <p style="margin-top:24px">арналған ақ дастарханымыздың<br>қадірлі қонағы болуға шақырамыз!</p>
-  </div>
+  <svg class="orn rv" viewBox="0 0 200 60"><use href="#horn"/></svg>
+  <h2 class="rv">Құрметті қонақтар!</h2>
+  <p class="lead rv" style="--d:120ms">Ағайын-туыс, бауырлар, нағашы-жиен, бөлелер, құда-жекжат, дос-жаран, әріптестер, көршілер!</p>
+  <p class="body rv" style="--d:240ms">Сіздерді <span data-f="babyRelation"></span> <b data-f="babyName"></b> бесік тойына және <span data-f="fatherRelation"></span> <b data-f="fatherName"></b> <span data-f="fatherAge"></span> жас мерейтойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!</p>
 </section>
 
-<div class="band light"><svg><rect width="100%" height="100%" fill="url(#bandp)" style="color:var(--gold)"/></svg></div>
+<!-- ===== TWO JOYS ===== -->
+<section class="joys">
+  <article class="joy a rv">
+    <svg class="moon" viewBox="0 0 180 180" fill="none" stroke="currentColor" aria-hidden="true">
+      <circle cx="90" cy="90" r="76" stroke-opacity=".22"/>
+      <circle cx="90" cy="90" r="60" stroke-opacity=".14"/>
+      <path class="glow" d="M116 42 A52 52 0 1 0 116 138 A42 42 0 1 1 116 42Z" fill="rgba(212,176,106,.14)" stroke-opacity=".75"/>
+    </svg>
+    <div class="tag">Бесік той</div>
+    <div class="nm foil foil-anim" data-f="babyName"></div>
+    <p>Немереміздің бесікке бөленуі</p>
+  </article>
+  <article class="joy b rv" style="--d:120ms">
+    <svg class="big" viewBox="0 0 230 190" aria-hidden="true"><text x="2" y="168" font-family="Cormorant Garamond, Georgia, serif" font-weight="300" font-size="210" data-f="fatherAge"></text></svg>
+    <div class="tag">Мерейтой</div>
+    <div class="nm foil foil-anim" data-f="fatherName"></div>
+    <p><span data-f="fatherAge"></span> жас мерейтойы</p>
+  </article>
+</section>
 
 <!-- ===== DATE ===== -->
 <section class="when">
-  <p class="caps rv">Той салтанаты</p>
-  <div class="bigdate rv d1">
+  <div class="bigdate rv">
     <div class="side" data-f="monthName"></div>
-    <div class="day foil" data-f="dayNum"></div>
+    <div class="day foil foil-anim" data-f="dayNum"></div>
     <div class="side" data-f="weekday"></div>
   </div>
-  <p class="serif rv d1" style="font-size:22px;letter-spacing:.3em" data-f="year"></p>
-  <div class="cal rv d2" id="cal"></div>
-  <ul class="timeline rv d3" id="prog"></ul>
+  <div class="yr rv" style="--d:120ms" data-f="year"></div>
+  <div class="cal rv" style="--d:200ms" id="cal"></div>
+  <ul class="timeline rv" id="prog"><span class="fill"></span></ul>
 </section>
 
 <!-- ===== COUNTDOWN ===== -->
 <section class="count">
-  <div class="stars" id="stars2"></div>
-  <p class="caps rv">Тойдың басталуына дейін</p>
-  <h3 class="rv d1">күтеміз, асығамыз…</h3>
-  <div class="timer rv d2">
-    <div><b id="cd-d">0</b><small>күн</small></div>
-    <div><b id="cd-h">00</b><small>сағат</small></div>
-    <div><b id="cd-m">00</b><small>минут</small></div>
-    <div><b id="cd-s">00</b><small>секунд</small></div>
+  <h3 class="rv">Тойдың басталуына дейін</h3>
+  <div class="timer rv" style="--d:150ms">
+    <div class="cell"><b id="cd-d">0</b><small>күн</small></div>
+    <div class="cell"><b id="cd-h">00</b><small>сағат</small></div>
+    <div class="cell"><b id="cd-m">00</b><small>минут</small></div>
+    <div class="cell"><b id="cd-s">00</b><small>секунд</small></div>
   </div>
 </section>
 
 <!-- ===== PLACE ===== -->
 <section class="place">
   <div class="pin rv">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>
+    <!-- Phosphor "MapPin" (regular), MIT -->
+    <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128 64a40 40 0 1 0 40 40 40 40 0 0 0-40-40Zm0 64a24 24 0 1 1 24-24 24 24 0 0 1-24 24Zm0-112a88.1 88.1 0 0 0-88 88c0 31.4 14.51 64.68 42 96.25a254.19 254.19 0 0 0 41.45 38.3 8 8 0 0 0 9.18 0 254.19 254.19 0 0 0 41.37-38.3c27.45-31.57 42-64.85 42-96.25a88.1 88.1 0 0 0-88-88Zm0 206c-16.53-13-72-60.75-72-118a72 72 0 0 1 144 0c0 57.23-55.47 105-72 118Z"/></svg>
   </div>
-  <p class="caps rv">Мекен-жайымыз</p>
-  <h3 class="rv d1" data-f="venue"></h3>
-  <p class="rv d1" data-f="address"></p>
-  <div class="btns rv d2">
-    <a class="btn dark" id="map" target="_blank" rel="noopener">Картаны ашу</a>
+  <h3 class="rv" data-f="venue"></h3>
+  <p class="rv" style="--d:120ms" data-f="address"></p>
+  <div class="btns rv" style="--d:220ms">
+    <a class="btn solid" id="map" target="_blank" rel="noopener">Картаны ашу</a>
     <a class="btn" id="gcal" target="_blank" rel="noopener">Күнтізбеге қосу</a>
   </div>
 </section>
 
-<!-- ===== HOSTS ===== -->
-<section class="hosts">
-  <svg class="shan rv" viewBox="0 0 260 260"><use href="#shanyrak"/></svg>
-  <p class="caps rv">Той иелері</p>
-  <div id="hosts" class="rv d1"></div>
-</section>
+<div class="band"><svg><rect width="100%" height="100%" fill="url(#bandp)"/></svg></div>
 
 <!-- ===== RSVP ===== -->
-<section class="rsvp">
-  <p class="caps rv">Жауабыңызды күтеміз</p>
-  <h2 class="rv d1">Тойға келесіз бе?</h2>
-  <p class="sub rv d1">Қатысуыңызды <span data-f="rsvpUntil"></span> дейін растауыңызды сұраймыз</p>
-  <form id="rsvp" class="rv d2">
-    <input type="text" name="name" placeholder="Аты-жөніңіз" required autocomplete="name">
-    <label class="opt"><input type="radio" name="ans" value="Иә, келемін" required><span>Иә, келемін</span></label>
+<section class="rsvp" id="rsvpSec">
+  <p class="eyebrow rv">Жауабыңызды күтеміз</p>
+  <h2 class="rv" style="--d:100ms">Тойға келесіз бе?</h2>
+  <p class="sub rv" style="--d:160ms">Қатысуыңызды <span data-f="rsvpUntil"></span> дейін растаңыз</p>
+  <form id="rsvp" class="rv" style="--d:240ms" novalidate>
+    <label class="lbl" for="gname">Аты-жөніңіз</label>
+    <input id="gname" type="text" name="name" autocomplete="name" placeholder="Мысалы, Айгүл Серікқызы">
+    <div class="err" id="errName">Аты-жөніңізді жазыңыз</div>
+    <label class="opt"><input type="radio" name="ans" value="Иә, келемін"><span>Иә, келемін</span></label>
     <label class="opt"><input type="radio" name="ans" value="Жұбайыммен келемін"><span>Жұбайыммен келемін</span></label>
     <label class="opt"><input type="radio" name="ans" value="Өкінішке орай, келе алмаймын"><span>Өкінішке орай, келе алмаймын</span></label>
-    <button class="send" type="submit">Жіберу</button>
-    <div class="thanks" id="thanks">Рақмет! Жауабыңыз қабылданды ♡</div>
+    <div class="err" id="errAns">Жауапты таңдаңыз</div>
+    <button class="btn solid foil-anim" type="submit" id="sendBtn">Жіберу</button>
   </form>
+  <div class="done" role="status">
+    <div class="serif">Рақмет, жауабыңыз қабылданды!</div>
+    <p id="doneMsg"></p>
+  </div>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer>
-  <svg class="orn" viewBox="0 0 200 60" style="color:var(--gold)"><use href="#horn"/></svg>
-  <div class="big foil">Қадірлі қонағымыз болыңыздар!</div>
-  <small>Құрметпен, <span data-f="hostsLine"></span></small>
+  <div class="shan draw" data-shan></div>
+  <div class="k rv">Той иелері</div>
+  <div class="hosts foil foil-anim rv" id="hosts"></div>
+  <div class="bye rv" style="--d:150ms">Қадірлі қонағымыз болыңыздар!</div>
 </footer>
 
 </div>
 
-<button class="music" id="music" aria-label="Музыка"><i></i><i></i><i></i><i></i></button>
+<button class="music" id="music" aria-label="Музыканы қосу немесе өшіру"><i></i><i></i><i></i><i></i></button>
 
 <script>
-/* ===== Барлық деректер осында — тек осы жерді өзгертіңіз ===== */
+/* ===== Барлық деректер осында. Тек осы жерді өзгертіңіз ===== */
 const CONFIG = {
   babyName: "Адия",                   // баланың аты
   babyRelation: "немереміз",          // ұлымыз / қызымыз / немереміз
+  babyNameGen: "Адияның",             // баланың аты, ілік септігінде (шақыру мәтіні үшін)
   fatherName: "Сардарбек",            // мерейтой иесі
+  fatherNameGen: "Сардарбектің",      // мерейтой иесі, ілік септігінде
   fatherRelation: "отағасы",          // әкеміз / атамыз / отағасы
   fatherAge: 63,
   jubileeTitle: "Мерейтой",
@@ -381,30 +405,60 @@ const CONFIG = {
   venue: "«Алтын» банкет залы",
   address: "Алматы қ., Қалқаман-2 ш.а., Ашимов к-сі, 241",
   mapUrl: "https://2gis.kz/almaty/firm/70000001027742021",
-  hosts: ["Сардарбек – Кыздыгой"],
+  hosts: ["Сардарбек", "Кыздыгой"],
   rsvpUntil: "3 қаңтарға",
   sheetUrl: "https://script.google.com/macros/s/AKfycbwTd-HD6-_V0Orx7DujjJbcpJNW6ClqC1HEwPw8rjdGS6SS38jCk4JuxHgYmFuMWDl1/exec",
   whatsapp: "",                       // қосымша: WhatsApp нөмірі, мысалы "77011234567"
-  music: "",                          // mp3 файл, мысалы "music.mp3". Бос болса — кіріктірілген әуен ойнайды
+  music: "",                          // mp3 файл, мысалы "music.mp3". Бос болса, кіріктірілген әуен ойнайды
 };
 /* ============================================================ */
 
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $ = s => document.querySelector(s);
+const pad = n => String(n).padStart(2,"0");
+
+/* ---------- data binding ---------- */
 const MONTHS = ["қаңтар","ақпан","наурыз","сәуір","мамыр","маусым","шілде","тамыз","қыркүйек","қазан","қараша","желтоқсан"];
 const WEEK = ["жексенбі","дүйсенбі","сейсенбі","сәрсенбі","бейсенбі","жұма","сенбі"];
 const when = new Date(CONFIG.date);
-// show event-local (Almaty, +05) parts regardless of visitor timezone
-const local = new Date(when.getTime() + 5*3600e3);
+const local = new Date(when.getTime() + 5*3600e3); // event-local (Almaty) parts
 const Y = local.getUTCFullYear(), M = local.getUTCMonth(), D = local.getUTCDate(), W = local.getUTCDay();
-const pad = n => String(n).padStart(2,"0");
 const F = {
   ...CONFIG,
-  dateShort: `${pad(D)} · ${pad(M+1)} · ${Y}`,
-  dayNum: pad(D), monthName: MONTHS[M], weekday: WEEK[W], year: Y,
-  hostsLine: CONFIG.hosts.join(", "),
+  dateShort:`${pad(D)}.${pad(M+1)}.${Y}`, dayNum:pad(D), monthName:MONTHS[M], weekday:WEEK[W], year:Y,
 };
 document.querySelectorAll("[data-f]").forEach(el => { el.textContent = F[el.dataset.f] ?? ""; });
+// greeting sentence uses genitive forms
+document.querySelectorAll(".greet .body b")[0].textContent = CONFIG.babyNameGen;
+document.querySelectorAll(".greet .body b")[1].textContent = CONFIG.fatherNameGen;
+$("#hosts").textContent = CONFIG.hosts.join(" & ");
+$("#map").href = CONFIG.mapUrl;
 
-// calendar + programme
+/* ---------- shanyrak (inline so each copy can draw itself) ---------- */
+function shanyrak(){
+  const uyk = Array.from({length:24},(_,i)=>`<line class="s3" pathLength="1" x1="0" y1="-94" x2="0" y2="-126" transform="rotate(${i*15})"/>`).join("");
+  return `<svg viewBox="-130 -130 260 260" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true">
+    <g stroke-width="1.3" opacity=".9">${uyk}</g>
+    <circle pathLength="1" r="92" stroke-width="2.6"/>
+    <circle class="s2" pathLength="1" r="84" stroke-width="1"/>
+    <g stroke-width="2">
+      <path class="s2" pathLength="1" d="M-80 -26 Q0 -40 80 -26"/><path class="s2" pathLength="1" d="M-84 0 Q0 -14 84 0"/><path class="s2" pathLength="1" d="M-80 26 Q0 12 80 26"/>
+      <path class="s2" pathLength="1" d="M-26 -80 Q-12 0 -26 80"/><path class="s2" pathLength="1" d="M0 -84 Q14 0 0 84"/><path class="s2" pathLength="1" d="M26 -80 Q40 0 26 80"/>
+    </g></svg>`;
+}
+document.querySelectorAll("[data-shan]").forEach(el => el.innerHTML = shanyrak());
+
+/* ---------- split letters for kinetic headline ---------- */
+document.querySelectorAll("[data-split]").forEach(el => {
+  const txt = el.textContent; el.textContent = ""; el.setAttribute("aria-label", txt);
+  [...txt].forEach((c,i) => {
+    const s = document.createElement("span");
+    s.className = "ch"; s.style.setProperty("--i", i); s.setAttribute("aria-hidden","true");
+    s.textContent = c === " " ? " " : c; el.appendChild(s);
+  });
+});
+
+/* ---------- calendar + programme ---------- */
 (() => {
   const first = (new Date(Date.UTC(Y,M,1)).getUTCDay()+6)%7, days = new Date(Date.UTC(Y,M+1,0)).getUTCDate();
   let h = "<table><tr>" + ["Дс","Сс","Ср","Бс","Жм","Сн","Жк"].map(d=>`<th>${d}</th>`).join("") + "</tr><tr>";
@@ -413,79 +467,109 @@ document.querySelectorAll("[data-f]").forEach(el => { el.textContent = F[el.data
     if ((first+d-1)%7===0 && d>1) h += "</tr><tr>";
     h += `<td class="${d===D?"on":""}"><span>${d}</span></td>`;
   }
-  document.getElementById("cal").innerHTML = h + "</tr></table>";
-  document.getElementById("prog").innerHTML =
-    CONFIG.program.map(([t,d]) => `<li><span class="t">${t}</span><span class="d">${d}</span></li>`).join("");
+  $("#cal").innerHTML = h + "</tr></table>";
+  $("#prog").insertAdjacentHTML("beforeend", CONFIG.program.map(([t,d]) => `<li><span class="t">${t}</span><span class="d">${d}</span></li>`).join(""));
 })();
 
-document.getElementById("map").href = CONFIG.mapUrl;
-document.getElementById("hosts").innerHTML = CONFIG.hosts.map(h => `<div class="h">${h}</div>`).join("");
-
-// Google Calendar link
+/* ---------- Google Calendar ---------- */
 (() => {
   const z = d => d.toISOString().replace(/[-:]|\.\d{3}/g,"");
   const end = new Date(when.getTime() + CONFIG.durationHours*3600e3);
-  const p = new URLSearchParams({
-    action:"TEMPLATE",
-    text:`Бесік той & Мерейтой — ${CONFIG.babyName}, ${CONFIG.fatherName}`,
-    dates:`${z(when)}/${z(end)}`,
-    location:`${CONFIG.venue}, ${CONFIG.address}`,
-    details:CONFIG.mapUrl,
+  $("#gcal").href = "https://calendar.google.com/calendar/render?" + new URLSearchParams({
+    action:"TEMPLATE", text:`Бесік той & Мерейтой: ${CONFIG.babyName}, ${CONFIG.fatherName}`,
+    dates:`${z(when)}/${z(end)}`, location:`${CONFIG.venue}, ${CONFIG.address}`, details:CONFIG.mapUrl,
   });
-  document.getElementById("gcal").href = "https://calendar.google.com/calendar/render?" + p;
 })();
 
-// stars
-function stars(id, n){
-  const box = document.getElementById(id);
-  for (let i=0;i<n;i++){
-    const s = document.createElement("i");
-    s.style.left = Math.random()*100+"%"; s.style.top = Math.random()*100+"%";
-    s.style.animationDelay = (Math.random()*3).toFixed(2)+"s";
-    s.style.animationDuration = (2+Math.random()*3).toFixed(2)+"s";
-    if (Math.random()<.2){ s.style.width = s.style.height = "3px"; }
-    box.appendChild(s);
-  }
+/* ---------- countdown with tick animation ---------- */
+const prev = {};
+function setCell(id, v){
+  if (prev[id] === v) return; prev[id] = v;
+  const el = document.getElementById(id); el.textContent = v;
+  if (!reduce){ el.classList.remove("tick"); void el.offsetWidth; el.classList.add("tick"); }
 }
-stars("stars", 60); stars("stars2", 30);
-
-// countdown
 function tick(){
   let s = Math.max(0, Math.floor((when - Date.now())/1000));
   const d = Math.floor(s/86400); s%=86400;
   const h = Math.floor(s/3600); s%=3600;
   const m = Math.floor(s/60); s%=60;
-  document.getElementById("cd-d").textContent = d;
-  document.getElementById("cd-h").textContent = pad(h);
-  document.getElementById("cd-m").textContent = pad(m);
-  document.getElementById("cd-s").textContent = pad(s);
+  setCell("cd-d", String(d)); setCell("cd-h", pad(h)); setCell("cd-m", pad(m)); setCell("cd-s", pad(s));
 }
-tick(); setInterval(tick,1000);
+tick(); setInterval(tick, 1000);
 
-// reveal on scroll
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }), {threshold:.12});
-document.querySelectorAll(".rv").forEach(el => io.observe(el));
+/* ---------- reveal on view ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add("in", "go");
+  io.unobserve(e.target);
+}), {threshold:.18});
+function startReveals(){ document.querySelectorAll(".wrap .rv, .wrap [data-split], .wrap .draw").forEach(el => io.observe(el)); }
 
-// rsvp
-document.getElementById("rsvp").addEventListener("submit", e => {
+/* ---------- gold dust (ambient, slow, paused when tab hidden) ---------- */
+(() => {
+  if (reduce) return;
+  const c = $("#dust"), x = c.getContext("2d"), dpr = Math.min(devicePixelRatio||1, 2); let W2, H2;
+  const size = () => { W2 = c.width = innerWidth*dpr; H2 = c.height = innerHeight*dpr; };
+  size(); addEventListener("resize", size);
+  const P = Array.from({length:46}, () => ({x:Math.random(), y:Math.random(), r:Math.random()*1.6+.4, s:Math.random()*.00025+.00008, a:Math.random()*6.28}));
+  (function loop(){
+    if (!document.hidden){
+      x.clearRect(0,0,W2,H2);
+      x.shadowColor = "rgba(246,227,176,.8)"; x.shadowBlur = 6*dpr;
+      for (const p of P){
+        p.y -= p.s; p.a += .01; if (p.y < -.02){ p.y = 1.02; p.x = Math.random(); }
+        x.beginPath(); x.arc((p.x + Math.sin(p.a)*.006)*W2, p.y*H2, p.r*dpr, 0, 6.283);
+        x.fillStyle = `rgba(246,227,176,${.35 + Math.sin(p.a*2)*.25})`; x.fill();
+      }
+    }
+    requestAnimationFrame(loop);
+  })();
+})();
+
+/* ---------- confetti burst (RSVP feedback) ---------- */
+function confetti(fromEl){
+  if (reduce) return;
+  const c = $("#confetti"), x = c.getContext("2d"), dpr = Math.min(devicePixelRatio||1, 2);
+  c.width = innerWidth*dpr; c.height = innerHeight*dpr;
+  const r = fromEl.getBoundingClientRect(), ox = (r.left + r.width/2)*dpr, oy = (r.top + r.height/2)*dpr;
+  const cols = ["#f6e3b0","#d4b06a","#fff3d1","#b88d45"];
+  const P = Array.from({length:120}, () => {
+    const a = Math.random()*Math.PI - Math.PI, v = (Math.random()*9+5)*dpr;
+    return {x:ox, y:oy, vx:Math.cos(a)*v, vy:Math.sin(a)*v - 4*dpr, w:(Math.random()*6+3)*dpr, h:(Math.random()*3+2)*dpr, rot:Math.random()*6, vr:Math.random()*.3-.15, c:cols[Math.random()*4|0]};
+  });
+  const t0 = performance.now();
+  (function f(t){
+    const k = (t - t0)/2200; x.clearRect(0,0,c.width,c.height);
+    for (const p of P){
+      p.vy += .32*dpr; p.vx *= .985; p.x += p.vx; p.y += p.vy; p.rot += p.vr;
+      x.save(); x.translate(p.x,p.y); x.rotate(p.rot); x.globalAlpha = Math.max(0,1-k);
+      x.fillStyle = p.c; x.fillRect(-p.w/2,-p.h/2,p.w,p.h); x.restore();
+    }
+    if (k < 1) requestAnimationFrame(f); else x.clearRect(0,0,c.width,c.height);
+  })(t0);
+}
+
+/* ---------- RSVP ---------- */
+$("#rsvp").addEventListener("submit", e => {
   e.preventDefault();
-  const f = new FormData(e.target);
-  const name = String(f.get("name")).trim(), ans = f.get("ans");
-  if (CONFIG.sheetUrl) fetch(CONFIG.sheetUrl, {method:"POST", mode:"no-cors",
-    headers:{"Content-Type":"text/plain;charset=utf-8"},
-    body: JSON.stringify({name, answer:ans})}).catch(()=>{});
-  if (CONFIG.whatsapp) window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(`Бесік той & мерейтой: ${name} — ${ans}`)}`, "_blank");
-  e.target.querySelector(".send").disabled = true;
-  document.getElementById("thanks").style.display = "block";
+  const f = new FormData(e.target), name = String(f.get("name")||"").trim(), ans = f.get("ans");
+  $("#errName").style.display = name ? "none" : "block";
+  $("#errAns").style.display = ans ? "none" : "block";
+  if (!name || !ans) return;
+  $("#sendBtn").disabled = true;
+  if (CONFIG.sheetUrl) fetch(CONFIG.sheetUrl, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain;charset=utf-8"}, body:JSON.stringify({name, answer:ans})}).catch(()=>{});
+  if (CONFIG.whatsapp) window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(`Бесік той & мерейтой: ${name}, ${ans}`)}`, "_blank");
+  confetti($("#sendBtn"));
+  $("#doneMsg").textContent = ans.startsWith("Өкінішке") ? "Хабарлағаныңызға рақмет." : `${name}, сізді тойда күтеміз!`;
+  $("#rsvpSec").classList.add("sent");
 });
 
-/* ===== Music =====
-   If CONFIG.music is set, plays that mp3. Otherwise plays a built-in,
-   gently plucked pentatonic lullaby synthesised with Web Audio. */
+/* ---------- Music ----------
+   CONFIG.music set: plays that mp3. Otherwise an original, gently plucked
+   pentatonic lullaby is synthesised with Web Audio. */
 const Music = (() => {
   let ctx, master, timer, playing = false, audio;
-  const SCALE = {D3:146.83,A3:220,C4:261.63,D4:293.66,E4:329.63,F4:349.23,G4:392,A4:440,C5:523.25,D5:587.33,E5:659.25,F5:698.46};
-  // [note, beats] — 3/4 lullaby feel
+  const N = {D3:146.83,A3:220,C4:261.63,D4:293.66,E4:329.63,F4:349.23,G4:392,A4:440,C5:523.25,D5:587.33,E5:659.25,F5:698.46};
   const MELODY = [
     ["A4",1],["D5",1],["C5",1], ["A4",2],["G4",1], ["A4",1],["C5",1],["D5",1], ["E5",3],
     ["F5",1],["E5",1],["D5",1], ["C5",2],["A4",1], ["G4",1],["A4",1],["C5",1], ["A4",3],
@@ -494,31 +578,28 @@ const Music = (() => {
   ];
   const BASS = ["D3","D3","A3","A3","D3","C4","A3","D3","D3","D3","A3","A3","D3","C4","A3","D3"];
   const BEAT = 60/76;
-
   function reverb(){
     const len = ctx.sampleRate*2.6, buf = ctx.createBuffer(2,len,ctx.sampleRate);
     for (let c=0;c<2;c++){ const d = buf.getChannelData(c); for (let i=0;i<len;i++) d[i] = (Math.random()*2-1)*Math.pow(1-i/len,2.4); }
     const cv = ctx.createConvolver(); cv.buffer = buf; return cv;
   }
   function pluck(freq, t, dur, vol){
-    const o1 = ctx.createOscillator(), o2 = ctx.createOscillator(), g = ctx.createGain(), lp = ctx.createBiquadFilter();
-    o1.type = "triangle"; o2.type = "sine"; o1.frequency.value = freq; o2.frequency.value = freq*2.003;
+    const o1 = ctx.createOscillator(), o2 = ctx.createOscillator(), g = ctx.createGain(), lp = ctx.createBiquadFilter(), g2 = ctx.createGain();
+    o1.type = "triangle"; o2.type = "sine"; o1.frequency.value = freq; o2.frequency.value = freq*2.003; g2.gain.value = .35;
     lp.type = "lowpass"; lp.frequency.setValueAtTime(freq*6, t); lp.frequency.exponentialRampToValueAtTime(freq*1.5, t+dur);
-    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(vol, t+0.012); g.gain.exponentialRampToValueAtTime(0.0001, t+dur);
-    const g2 = ctx.createGain(); g2.gain.value = .35;
+    g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(vol, t+.012); g.gain.exponentialRampToValueAtTime(.0001, t+dur);
     o1.connect(lp); o2.connect(g2).connect(lp); lp.connect(g).connect(master);
     o1.start(t); o2.start(t); o1.stop(t+dur+.05); o2.stop(t+dur+.05);
   }
   function scheduleLoop(start){
-    let t = start, bar = 0, beatInBar = 0;
+    let t = start, bar = 0, beat = 0;
     MELODY.forEach(([n,b]) => {
-      if (beatInBar === 0){
-        const f = SCALE[BASS[bar % BASS.length]];
+      if (beat === 0){
+        const f = N[BASS[bar % BASS.length]];
         pluck(f/2, t, BEAT*3.2, .18); pluck(f, t+BEAT, BEAT*1.2, .05); pluck(f*1.5, t+BEAT*2, BEAT*1.2, .05);
       }
-      pluck(SCALE[n], t, Math.max(1.2, b*BEAT*1.4), .16);
-      t += b*BEAT; beatInBar += b;
-      while (beatInBar >= 3){ beatInBar -= 3; bar++; }
+      pluck(N[n], t, Math.max(1.2, b*BEAT*1.4), .16);
+      t += b*BEAT; beat += b; while (beat >= 3){ beat -= 3; bar++; }
     });
     return t;
   }
@@ -541,7 +622,7 @@ const Music = (() => {
     master.gain.cancelScheduledValues(ctx.currentTime);
     master.gain.setValueAtTime(master.gain.value, ctx.currentTime);
     master.gain.linearRampToValueAtTime(0, ctx.currentTime+.6);
-    setTimeout(() => ctx.suspend(), 700);
+    setTimeout(() => { if (!playing) ctx.suspend(); }, 700);
   }
   return {
     get playing(){ return playing; },
@@ -558,18 +639,24 @@ const Music = (() => {
     },
   };
 })();
+const mBtn = $("#music");
+const sync = () => mBtn.classList.toggle("on", Music.playing);
+mBtn.addEventListener("click", () => { Music.playing ? Music.pause() : Music.play(); sync(); });
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden && Music.playing){ Music.pause(); mBtn.dataset.resume = "1"; }
+  else if (!document.hidden && mBtn.dataset.resume){ delete mBtn.dataset.resume; Music.play(); }
+  sync();
+});
 
-const mBtn = document.getElementById("music");
-const syncBtn = () => mBtn.classList.toggle("on", Music.playing);
-mBtn.addEventListener("click", () => { Music.playing ? Music.pause() : Music.play(); syncBtn(); });
-
-// gate
-document.getElementById("openBtn").addEventListener("click", () => {
-  const gate = document.getElementById("gate");
+/* ---------- gate ---------- */
+const gate = $("#gate");
+requestAnimationFrame(() => { gate.querySelector(".draw").classList.add("go"); gate.classList.add("ready"); });
+$("#openBtn").addEventListener("click", () => {
   gate.classList.add("open");
   document.body.classList.remove("locked");
-  Music.play(); mBtn.classList.add("show"); syncBtn();
-  setTimeout(() => gate.remove(), 1600);
+  Music.play(); mBtn.classList.add("show"); sync();
+  setTimeout(startReveals, 450);
+  setTimeout(() => gate.remove(), 1700);
 });
 </script>
 </body>
