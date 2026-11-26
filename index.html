@@ -27,10 +27,10 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 body{background:var(--bg-3);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden;font-variant-numeric:lining-nums}
-body.locked{overflow:hidden;height:100dvh}
+body.locked{overflow:hidden;height:100vh;height:100dvh}
 ::selection{background:var(--gold);color:var(--bg)}
 
-#dust{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:3;mix-blend-mode:screen}
+#dust{position:fixed;top:0;right:0;bottom:0;left:0;width:100%;height:100%;pointer-events:none;z-index:3;mix-blend-mode:screen}
 .wrap{position:relative;z-index:2;max-width:480px;margin:0 auto;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 35%,var(--bg) 70%,var(--bg-3) 100%);box-shadow:0 0 120px rgba(0,0,0,.6);overflow:hidden}
 section{position:relative;padding:88px 28px}
 .serif{font-family:var(--serif)}
@@ -39,13 +39,12 @@ section{position:relative;padding:88px 28px}
 
 /* ---------- Shanyrak (inline, draws itself) ---------- */
 .shan{display:block;color:var(--gold)}
-.draw *{stroke-dasharray:1;stroke-dashoffset:1}
 .draw.go *{animation:draw 2.6s var(--ease) forwards}
 .draw.go .s2{animation-delay:.5s}.draw.go .s3{animation-delay:.9s;animation-duration:1.6s}
 @keyframes draw{to{stroke-dashoffset:0}}
 
 /* ---------- GATE ---------- */
-#gate{position:fixed;inset:0;z-index:50;display:grid;grid-template-columns:1fr 1fr}
+#gate{position:fixed;top:0;right:0;bottom:0;left:0;z-index:50;display:grid;grid-template-columns:1fr 1fr}
 #gate .door{background:radial-gradient(120% 80% at 100% 50%,#18304f 0%,var(--bg) 60%,var(--bg-3) 100%);transition:transform 1.5s cubic-bezier(.77,0,.18,1)}
 #gate .door.r{background:radial-gradient(120% 80% at 0% 50%,#18304f 0%,var(--bg) 60%,var(--bg-3) 100%)}
 #gate .door.l{box-shadow:inset -1px 0 0 rgba(212,176,106,.12)}
@@ -53,7 +52,7 @@ section{position:relative;padding:88px 28px}
 #gate .burst{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px;border-radius:50%;background:radial-gradient(circle,#fff6dc 0%,rgba(246,227,176,.5) 30%,transparent 70%);opacity:0;pointer-events:none}
 #gate.open .burst{animation:burst 1.2s ease-out}
 @keyframes burst{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(160)}}
-#gate .seal{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;text-align:center;transition:opacity .5s,transform .8s var(--ease)}
+#gate .seal{position:absolute;top:0;right:0;bottom:0;left:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;text-align:center;transition:opacity .5s,transform .8s var(--ease)}
 #gate.open .seal{opacity:0;transform:scale(1.08);pointer-events:none}
 #gate .shan{width:min(62vw,230px);filter:drop-shadow(0 0 24px rgba(212,176,106,.35))}
 #gate .ttl{margin-top:34px;font-family:var(--serif);font-weight:400;font-size:clamp(34px,10vw,44px);line-height:1.15;padding-bottom:4px;opacity:0;transform:translateY(14px);transition:opacity 1s var(--ease) 1.6s,transform 1s var(--ease) 1.6s}
@@ -61,19 +60,19 @@ section{position:relative;padding:88px 28px}
 #gate .open-btn{margin-top:40px;opacity:0;transform:translateY(14px);transition:opacity 1s var(--ease) 2.2s,transform 1s var(--ease) 2.2s}
 #gate.ready .ttl,#gate.ready .sub,#gate.ready .open-btn{opacity:1;transform:none}
 
-.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;border-radius:999px;border:1px solid var(--gold);background:transparent;color:var(--gold-hi);font:500 12px var(--sans);letter-spacing:.24em;text-transform:uppercase;text-decoration:none;white-space:nowrap;cursor:pointer;overflow:hidden;transition:transform .2s var(--ease)}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;padding:16px 30px;border-radius:999px;border:1px solid var(--gold);background:transparent;color:var(--gold-hi);font:500 12px var(--sans);letter-spacing:.24em;text-transform:uppercase;text-decoration:none;white-space:nowrap;cursor:pointer;overflow:hidden;transition:transform .2s var(--ease)}
 .btn:active{transform:scale(.97)}
-.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,240,200,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .9s var(--ease)}
+.btn::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(100deg,transparent 30%,rgba(255,240,200,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .9s var(--ease)}
 .btn:hover::after{transform:translateX(120%)}
 .btn.solid{background:var(--foil);background-size:220% 100%;border-color:transparent;color:var(--bg);font-weight:600}
 .btn:disabled{opacity:.6}
 .pulse{overflow:visible}
-.pulse::before{content:"";position:absolute;inset:-1px;border-radius:inherit;border:1px solid var(--gold);animation:ring 2.4s ease-out infinite}
+.pulse::before{content:"";position:absolute;top:-1px;right:-1px;bottom:-1px;left:-1px;border-radius:inherit;border:1px solid var(--gold);animation:ring 2.4s ease-out infinite}
 @keyframes ring{from{opacity:.8;transform:scale(1)}to{opacity:0;transform:scale(1.25,1.6)}}
 
 /* ---------- HERO ---------- */
-.hero{min-height:100dvh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:72px 24px 64px;isolation:isolate}
-.hero .halo{position:absolute;left:50%;top:44%;width:140%;aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(212,176,106,.16) 0%,rgba(212,176,106,.04) 35%,transparent 62%);z-index:-1}
+.hero{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:72px 24px 64px;isolation:isolate}
+.hero .halo{position:absolute;left:50%;top:44%;width:660px;height:660px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(212,176,106,.16) 0%,rgba(212,176,106,.04) 35%,transparent 62%);z-index:-1}
 .hero .shan-bg{position:absolute;left:50%;top:44%;width:150%;transform:translate(-50%,-50%);opacity:.08;z-index:-1;animation:spin 140s linear infinite}
 @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
 @supports (animation-timeline: scroll()){
@@ -164,7 +163,7 @@ section{position:relative;padding:88px 28px}
 /* ---------- PLACE ---------- */
 .place{text-align:center}
 .pin{width:64px;height:64px;margin:0 auto 22px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--gold);position:relative}
-.pin::before{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid var(--gold);animation:ring 2.6s ease-out infinite}
+.pin::before{content:"";position:absolute;top:-1px;right:-1px;bottom:-1px;left:-1px;border-radius:50%;border:1px solid var(--gold);animation:ring 2.6s ease-out infinite}
 .pin svg{width:26px;height:26px;animation:bob 2.6s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-4px)}}
 .place h3{font-family:var(--serif);font-weight:400;font-size:38px;line-height:1.15;padding-bottom:4px}
@@ -182,8 +181,8 @@ section{position:relative;padding:88px 28px}
 .rsvp input[type=text]:focus{border-color:var(--gold)}
 .opt{display:block;cursor:pointer}
 .opt input{position:absolute;opacity:0;pointer-events:none}
-.opt span{display:flex;align-items:center;gap:14px;padding:15px 18px;border:1px solid var(--line);border-radius:var(--r);font-size:14.5px;transition:border-color .3s,background .3s,transform .2s var(--ease)}
-.opt span::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;border:1px solid var(--gold);transition:.3s var(--ease)}
+.opt span{display:flex;align-items:center;padding:15px 18px;border:1px solid var(--line);border-radius:var(--r);font-size:14.5px;transition:border-color .3s,background .3s,transform .2s var(--ease)}
+.opt span::before{content:"";flex:none;margin-right:14px;width:18px;height:18px;border-radius:50%;border:1px solid var(--gold);transition:.3s var(--ease)}
 .opt:active span{transform:scale(.98)}
 .opt input:checked + span{border-color:var(--gold);background:rgba(212,176,106,.1)}
 .opt input:checked + span::before{background:var(--gold);box-shadow:inset 0 0 0 4px var(--bg-2)}
@@ -194,7 +193,7 @@ section{position:relative;padding:88px 28px}
 .done .serif{font-size:30px;font-style:italic;line-height:1.25;color:var(--gold-hi);padding-bottom:4px}
 .done p{margin-top:8px;font-size:14px;color:var(--text-dim)}
 .rsvp.sent form{display:none}.rsvp.sent .done{display:block;animation:pop .8s var(--ease)}
-#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:45}
+#confetti{position:fixed;top:0;right:0;bottom:0;left:0;width:100%;height:100%;pointer-events:none;z-index:45}
 
 /* ---------- FOOTER ---------- */
 footer{position:relative;text-align:center;padding:72px 24px calc(110px + env(safe-area-inset-bottom))}
@@ -204,22 +203,26 @@ footer .hosts{margin-top:10px;font-family:var(--serif);font-style:italic;font-si
 footer .bye{margin-top:34px;font-family:var(--serif);font-size:22px;color:var(--gold-hi)}
 
 /* ---------- Music ---------- */
-.music{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:40;width:54px;height:54px;border-radius:50%;border:1px solid var(--gold);background:rgba(11,22,38,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 rgba(255,240,200,.18),0 10px 30px rgba(0,0,0,.4);display:none;align-items:flex-end;justify-content:center;gap:3px;padding-bottom:18px;cursor:pointer}
+.music{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:40;width:54px;height:54px;border-radius:50%;border:1px solid var(--gold);background:rgba(11,22,38,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 rgba(255,240,200,.18),0 10px 30px rgba(0,0,0,.4);display:none;align-items:flex-end;justify-content:center;padding-bottom:18px;cursor:pointer}
 .music.show{display:flex;animation:pop .6s var(--ease)}
 @keyframes pop{from{transform:scale(.6);opacity:0}}
-.music i{width:3px;height:5px;border-radius:2px;background:var(--gold)}
+.music i{margin:0 1.5px;width:3px;height:5px;border-radius:2px;background:var(--gold)}
 .music.on i{animation:eq 1s ease-in-out infinite}
 .music.on i:nth-child(2){animation-delay:.25s}.music.on i:nth-child(3){animation-delay:.5s}.music.on i:nth-child(4){animation-delay:.12s}
 @keyframes eq{0%,100%{height:5px}50%{height:18px}}
 
 @media (min-width:520px){ .wrap{border-left:1px solid rgba(212,176,106,.14);border-right:1px solid rgba(212,176,106,.14)} }
 @media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .rv,.split .ch{opacity:1;transform:none;filter:none}
-  .draw *{stroke-dashoffset:0}
-  .joy.b .big text{stroke-dashoffset:0}
-  .timeline .fill{transform:none}
-  #gate .ttl,#gate .sub,#gate .open-btn{opacity:1;transform:none}
+  /* "Reduce motion" on the phone: no movement, but soft fades stay so the page still feels alive */
+  .rv,.split .ch{transform:none!important;filter:none!important;transition:opacity .9s ease!important;transition-delay:var(--d,0ms)!important}
+  .hero .shan-bg,.foil-anim,.split.foil .ch,.pulse::before,.pin::before,.pin svg,.cal td.on::before,.cal td.on::after,.joy.a .moon .glow,.music.on i{animation:none!important}
+  .cell b.tick{animation:none!important}
+  #gate .door{transition:none!important}
+  #gate.open{opacity:0;transition:opacity .8s ease}
+  #gate.open .door.l,#gate.open .door.r{transform:none}
+  #gate .burst{display:none}
+  .joy.b .big text{stroke-dashoffset:0;transition:none}
+  .timeline .fill{transform:none;transition:none}
 }
 </style>
 </head>
@@ -427,7 +430,7 @@ const F = {
   ...CONFIG,
   dateShort:`${pad(D)}.${pad(M+1)}.${Y}`, dayNum:pad(D), monthName:MONTHS[M], weekday:WEEK[W], year:Y,
 };
-document.querySelectorAll("[data-f]").forEach(el => { el.textContent = F[el.dataset.f] ?? ""; });
+document.querySelectorAll("[data-f]").forEach(el => { { const v = F[el.dataset.f]; el.textContent = v == null ? "" : v; } });
 // greeting sentence uses genitive forms
 document.querySelectorAll(".greet .body b")[0].textContent = CONFIG.babyNameGen;
 document.querySelectorAll(".greet .body b")[1].textContent = CONFIG.fatherNameGen;
@@ -436,17 +439,28 @@ $("#map").href = CONFIG.mapUrl;
 
 /* ---------- shanyrak (inline so each copy can draw itself) ---------- */
 function shanyrak(){
-  const uyk = Array.from({length:24},(_,i)=>`<line class="s3" pathLength="1" x1="0" y1="-94" x2="0" y2="-126" transform="rotate(${i*15})"/>`).join("");
+  const uyk = Array.from({length:24},(_,i)=>`<line class="s3" x1="0" y1="-94" x2="0" y2="-126" transform="rotate(${i*15})"/>`).join("");
   return `<svg viewBox="-130 -130 260 260" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true">
     <g stroke-width="1.3" opacity=".9">${uyk}</g>
-    <circle pathLength="1" r="92" stroke-width="2.6"/>
-    <circle class="s2" pathLength="1" r="84" stroke-width="1"/>
+    <circle r="92" stroke-width="2.6"/>
+    <circle class="s2" r="84" stroke-width="1"/>
     <g stroke-width="2">
-      <path class="s2" pathLength="1" d="M-80 -26 Q0 -40 80 -26"/><path class="s2" pathLength="1" d="M-84 0 Q0 -14 84 0"/><path class="s2" pathLength="1" d="M-80 26 Q0 12 80 26"/>
-      <path class="s2" pathLength="1" d="M-26 -80 Q-12 0 -26 80"/><path class="s2" pathLength="1" d="M0 -84 Q14 0 0 84"/><path class="s2" pathLength="1" d="M26 -80 Q40 0 26 80"/>
+      <path class="s2" d="M-80 -26 Q0 -40 80 -26"/><path class="s2" d="M-84 0 Q0 -14 84 0"/><path class="s2" d="M-80 26 Q0 12 80 26"/>
+      <path class="s2" d="M-26 -80 Q-12 0 -26 80"/><path class="s2" d="M0 -84 Q14 0 0 84"/><path class="s2" d="M26 -80 Q40 0 26 80"/>
     </g></svg>`;
 }
-document.querySelectorAll("[data-shan]").forEach(el => el.innerHTML = shanyrak());
+document.querySelectorAll("[data-shan]").forEach(el => {
+  el.innerHTML = shanyrak();
+  if (!el.classList.contains("draw") || reduce) return;
+  el.querySelectorAll("line,circle,path").forEach(g => {
+    let L = 0;
+    if (g.tagName === "circle") L = 2*Math.PI*g.r.baseVal.value;
+    else if (g.tagName === "line") L = 32;
+    else { try { L = g.getTotalLength(); } catch(e){ L = 200; } }
+    L = Math.ceil(L) + 2;
+    g.style.strokeDasharray = L; g.style.strokeDashoffset = L;
+  });
+});
 
 /* ---------- split letters for kinetic headline ---------- */
 document.querySelectorAll("[data-split]").forEach(el => {
@@ -498,32 +512,38 @@ function tick(){
 tick(); setInterval(tick, 1000);
 
 /* ---------- reveal on view ---------- */
-const io = new IntersectionObserver(es => es.forEach(e => {
+const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => {
   if (!e.isIntersecting) return;
   e.target.classList.add("in", "go");
   io.unobserve(e.target);
-}), {threshold:.18});
-function startReveals(){ document.querySelectorAll(".wrap .rv, .wrap [data-split], .wrap .draw").forEach(el => io.observe(el)); }
+}), {threshold:.12, rootMargin:"0px 0px -5% 0px"}) : null;
+function startReveals(){
+  const els = document.querySelectorAll(".wrap .rv, .wrap [data-split], .wrap .draw");
+  if (!io){ els.forEach(el => el.classList.add("in","go")); return; }
+  els.forEach(el => io.observe(el));
+}
 
 /* ---------- gold dust (ambient, slow, paused when tab hidden) ---------- */
 (() => {
   if (reduce) return;
-  const c = $("#dust"), x = c.getContext("2d"), dpr = Math.min(devicePixelRatio||1, 2); let W2, H2;
+  const weak = (navigator.hardwareConcurrency||4) <= 4 || (navigator.deviceMemory||4) <= 2;
+  const c = $("#dust"), x = c.getContext("2d"), dpr = Math.min(devicePixelRatio||1, weak ? 1 : 1.5); let W2, H2, last = 0;
   const size = () => { W2 = c.width = innerWidth*dpr; H2 = c.height = innerHeight*dpr; };
   size(); addEventListener("resize", size);
-  const P = Array.from({length:46}, () => ({x:Math.random(), y:Math.random(), r:Math.random()*1.6+.4, s:Math.random()*.00025+.00008, a:Math.random()*6.28}));
-  (function loop(){
-    if (!document.hidden){
+  const P = Array.from({length: weak ? 22 : 40}, () => ({x:Math.random(), y:Math.random(), r:Math.random()*1.6+.4, s:Math.random()*.00025+.00008, a:Math.random()*6.28}));
+  (function loop(t){
+    requestAnimationFrame(loop);
+    if (document.hidden || t - last < 33) return; last = t;
+    {
       x.clearRect(0,0,W2,H2);
       x.shadowColor = "rgba(246,227,176,.8)"; x.shadowBlur = 6*dpr;
       for (const p of P){
-        p.y -= p.s; p.a += .01; if (p.y < -.02){ p.y = 1.02; p.x = Math.random(); }
+        p.y -= p.s*2; p.a += .02; if (p.y < -.02){ p.y = 1.02; p.x = Math.random(); }
         x.beginPath(); x.arc((p.x + Math.sin(p.a)*.006)*W2, p.y*H2, p.r*dpr, 0, 6.283);
         x.fillStyle = `rgba(246,227,176,${.35 + Math.sin(p.a*2)*.25})`; x.fill();
       }
     }
-    requestAnimationFrame(loop);
-  })();
+  })(0);
 })();
 
 /* ---------- confetti burst (RSVP feedback) ---------- */
