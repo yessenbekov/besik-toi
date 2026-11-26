@@ -409,7 +409,7 @@ const CONFIG = {
   rsvpUntil: "3 қаңтарға",
   sheetUrl: "https://script.google.com/macros/s/AKfycbwTd-HD6-_V0Orx7DujjJbcpJNW6ClqC1HEwPw8rjdGS6SS38jCk4JuxHgYmFuMWDl1/exec",
   whatsapp: "",                       // қосымша: WhatsApp нөмірі, мысалы "77011234567"
-  music: "",                          // mp3 файл, мысалы "music.mp3". Бос болса, кіріктірілген әуен ойнайды
+  music: "music.m4a",                 // ән файлы (mp3/m4a). Бос болса, кіріктірілген әуен ойнайды
 };
 /* ============================================================ */
 
@@ -568,7 +568,13 @@ $("#rsvp").addEventListener("submit", e => {
    CONFIG.music set: plays that mp3. Otherwise an original, gently plucked
    pentatonic lullaby is synthesised with Web Audio. */
 const Music = (() => {
-  let ctx, master, timer, playing = false, audio;
+  let ctx, master, timer, playing = false, audio, fadeT;
+  // start downloading the song while the guest looks at the gate
+  const preloaded = CONFIG.music ? Object.assign(new Audio(), {src:CONFIG.music, loop:true, preload:"auto"}) : null;
+  function fade(a, to, ms){
+    clearInterval(fadeT); const from = a.volume, t0 = performance.now();
+    fadeT = setInterval(() => { const k = Math.min(1, (performance.now()-t0)/ms); a.volume = from + (to-from)*k; if (k === 1){ clearInterval(fadeT); if (to === 0) a.pause(); } }, 40);
+  }
   const N = {D3:146.83,A3:220,C4:261.63,D4:293.66,E4:329.63,F4:349.23,G4:392,A4:440,C5:523.25,D5:587.33,E5:659.25,F5:698.46};
   const MELODY = [
     ["A4",1],["D5",1],["C5",1], ["A4",2],["G4",1], ["A4",1],["C5",1],["D5",1], ["E5",3],
@@ -629,13 +635,14 @@ const Music = (() => {
     play(){
       if (playing) return; playing = true;
       if (CONFIG.music){
-        audio = audio || Object.assign(new Audio(CONFIG.music), {loop:true, volume:.7});
-        audio.play().catch(() => { CONFIG.music = ""; playing = false; this.play(); });
+        audio = audio || preloaded || Object.assign(new Audio(CONFIG.music), {loop:true});
+        audio.volume = 0;
+        audio.play().then(() => fade(audio, .8, 1800)).catch(() => { CONFIG.music = ""; playing = false; this.play(); });
       } else startSynth();
     },
     pause(){
       if (!playing) return; playing = false;
-      if (audio && CONFIG.music) audio.pause(); else stopSynth();
+      if (audio && CONFIG.music) fade(audio, 0, 500); else stopSynth();
     },
   };
 })();
